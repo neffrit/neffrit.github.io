@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Engineer - Никита Большунов</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+        
+        section {
+            padding: 50px 0;
+            background: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .skill-card {
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 40px;
+            text-align: center;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .skills-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skill-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="me.jpg" alt="[Ваше Имя]" class="profile-img">
+            <h1>Большунов Никита</h1>
+            <p class="tagline">QA Engineer | Обеспечение качества | Ручное тестирование</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ваш-профиль" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/neffrit" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/cshmrct" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="mailto:blowyourbrainnn@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Я QA Engineer с 4 месяцами опыта в тестировании веб и мобильных приложений. 
+                Специализируюсь на ручном тестировании, обеспечении качества на всех этапах 
+                разработки программного обеспечения и улучшении процессов тестирования. 
+                Имею опыт работы с различными методологиями (Agile, Scrum, Kanban) и инструментами тестирования.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Навыки</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-bug"></i></div>
+                    <h3>Ручное тестирование</h3>
+                    <p>Функциональное, регрессионное, smoke тестирование</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Автотесты</h3>
+                    <p>-</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Программирование</h3>
+                    <p>-</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Базы данных</h3>
+                    <p>SQL, PostgreSQL, MongoDB, Kibana, Sentry, Jaeger</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>API тестирование</h3>
+                    <p>Postman, Swagger, GraphQL , SoapUI</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>Тест-менеджмент</h3>
+                    <p>Buildin, Яндекс.Трекер, Test IT, Miro, Obsidian</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Опыт работы</h2>
+            
+            <div class="experience-item">
+                <h3 class="job-title">Junior QA Engineer</h3>
+                <p class="company">QA Studio "Джуны"</p>
+                <p class="date">Апрель 2025 - Настоящее время</p>
+                <ul style="padding-left: 20px; margin-top: 10px;">
+                    <li>Ручное тестирование веб-приложений</li>
+                    <li>Написание тест-кейсов и чек-листов</li>
+                    <li>Анализ требований и создание тестовой документации</li>
+                     <li>Составление баг-репортов</li>
+                    <li>Участие в процессах CI/CD</li>
+                    
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 class="job-title">QA Engineer</h3>
+                <p class="company">Другая компания</p>
+                <p class="date">Март 2024 - Декабрь 2024</p>
+                <ul style="padding-left: 20px; margin-top: 10px;">
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Образование</h2>
+            <div class="experience-item">
+                <h3 class="job-title">Национальный институт имени Екатерины Великой</h3>
+                <p class="company">Специальность: Юриспруденция</p>
+                <p class="date">2010 - 2018</p>
+            </div>
+            
+            <div class="experience-item">
+                <h3 class="job-title">Курсы по тестированию</h3>
+                <p class="company">Stepik - курс Артема Русова </p>
+                <p class="date">2024</p>
+                <p class="company">QA Studio - Junior+</p>
+                <p class="date">2025</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>blowyourbrainnn@gmail.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div>+7 (926) 872-45-08</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>Серпухов, Россия</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <div>linkedin.com(пока нет)</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div>github.com/neffrit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Большунов Никита. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
